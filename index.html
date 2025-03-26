@@ -1,100 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Loja de Sapatos</title>
+
     <style>
         body {
+
             font-family: sans-serif;
+
             margin: 0;
+
             padding: 0;
+
             background-color: #f4f4f4;
+
         }
 
-        h1, h2 {
+
+
+        h1,
+        h2 {
+
             text-align: center;
+
         }
+
+
 
         .produto {
+
             background-color: #fff;
+
             border: 1px solid #ddd;
+
             margin: 20px auto;
+
             padding: 20px;
+
             width: 300px;
+
             text-align: center;
+
         }
+
+
+
+        .produto img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            margin-bottom: 10px;
+
+        }
+
+
 
         .produto button {
+
             background-color: #007bff;
+
             border: none;
+
             color: white;
+
             padding: 10px 20px;
+
             text-align: center;
+
             text-decoration: none;
+
             display: inline-block;
+
             font-size: 16px;
+
             margin-top: 10px;
+
             cursor: pointer;
+
         }
+
+
 
         .produto button:hover {
+
             background-color: #0056b3;
+
         }
 
+
+
         .contato {
+
             text-align: center;
+
             margin-top: 30px;
+
         }
     </style>
 </head>
+
 <body>
+
     <h1>Bem-vindo à nossa loja de sapatos!</h1>
+
+
 
     <h2>Nossos produtos:</h2>
 
+
+
     <div class="produto">
+
         <h3>Sapato Social Clássico</h3>
+
+        <img src="data:image/jpeg;base64,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" alt="Sapato Social Clássico">
+
         <p>Elegância e conforto para o seu dia a dia.</p>
+
         <p>Preço: R$ 199,90</p>
+
         <button onclick="adicionarAoCarrinho('Sapato Social Clássico')">Adicionar ao carrinho</button>
+
     </div>
 
+
+
     <div class="produto">
+
         <h3>Tênis Esportivo</h3>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpa1fhVDPA3LXdlyukXc-iZPBM7rKCZTPig&s" alt="Tênis Esportivo">
+
         <p>Ideal para atividades físicas e looks casuais.</p>
+
         <p>Preço: R$ 149,90</p>
+
         <button onclick="adicionarAoCarrinho('Tênis Esportivo')">Adicionar ao carrinho</button>
+
     </div>
 
+
+
     <div class="produto">
+
         <h3>Sandália Feminina</h3>
+
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSNnAHa77lvshG3Gahe99oJo3d5zrDzDXb2zybUw_P82nuQS4FznfOfFVo9Ohp42bo9gzuOPjDAhvKgp6GV8H4WhJ2plIrbW3eMPmgH-TZGvwGTijhJh-NDhwdh8Qq6nS7MKzVgql8&usqp=CAc" alt="Sandália Feminina">
+
         <p>Estilo e leveza para os dias mais quentes.</p>
+
         <p>Preço: R$ 129,90</p>
+
         <button onclick="adicionarAoCarrinho('Sandália Feminina')">Adicionar ao carrinho</button>
+
     </div>
 
+
+
     <div class="produto">
+
         <h3>Bota Masculina</h3>
+
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSbZOmOBEoXrAq9cn3PjIjLchPQfQdu8DlLbwDc_ku7e7rMsi3V6s22av6g9KHQgglinYnmp5sHrWfLuG-a0sC6eV0VQ_BXsvbMY3tpVLGCHWWio9XcOvrJw9PTnvZObjUpm25rzJA&usqp=CAc" alt="Bota Masculina">
+
         <p>Resistência e estilo para todas as ocasiões.</p>
+
         <p>Preço: R$ 249,90</p>
+
         <button onclick="adicionarAoCarrinho('Bota Masculina')">Adicionar ao carrinho</button>
+
     </div>
+
+
 
     <div class="contato">
+
         <h2>Contato</h2>
+
         <p>Para mais informações, entre em contato conosco:</p>
+
         <ul>
+
             <li>Email: contato@lojasapatos.com.br</li>
+
             <li>Telefone: (11) 1234-5678</li>
+
         </ul>
+
     </div>
 
+
+
     <script>
+
         function adicionarAoCarrinho(nomeProduto) {
+
             alert(nomeProduto + " adicionado ao carrinho!");
+
             // Aqui você pode adicionar a lógica real para adicionar o produto ao carrinho
+
         }
+
     </script>
 </body>
+
 </html>
